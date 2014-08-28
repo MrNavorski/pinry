@@ -1,4 +1,7 @@
-from django.core.validators import email_re
+try:
+    from django.forms.fields import email_re
+except ImportError:
+    from django.core.validators import email_re
 
 from pinry.core.models import Pin
 from pinry.users.models import User
