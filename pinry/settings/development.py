@@ -14,3 +14,8 @@ DATABASES = {
 }
 
 SECRET_KEY = 'fake-key'
+
+SOUTH_MIGRATION_MODULES = {
+        'taggit': 'taggit.south_migrations',
+}
+
