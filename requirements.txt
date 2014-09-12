@@ -1,5 +1,5 @@
 # core
-Django
+Django==1.6.7
 Pillow
 South
 requests
@@ -7,7 +7,9 @@ django-taggit
 django-images
 django-braces
 django_compressor
-django-tastypie==0.9.14
+#django-tastypie==0.9.14
+django-tastypie
+MySQL-python==1.2.5
 
 # testing
 mock
