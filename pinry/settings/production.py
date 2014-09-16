@@ -27,3 +27,5 @@ DATABASES = {
 
 # TODO: Be sure to set this.
 SECRET_KEY = 'alsjd8734aj^$^%'
+
+ALLOWED_HOSTS = ['*']
