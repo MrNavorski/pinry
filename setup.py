@@ -15,7 +15,7 @@ install_requires = [
     'django-images',
     'django-braces',
     'django_compressor',
-    'django-tastypie==0.9.14',
+    'django-tastypie',
 ]
 
 setup(
