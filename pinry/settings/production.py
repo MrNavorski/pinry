@@ -26,4 +26,4 @@ DATABASES = {
 }
 
 # TODO: Be sure to set this.
-SECRET_KEY = ''
+SECRET_KEY = 'alsjd8734aj^$^%'
