@@ -1,15 +1,22 @@
-try:
-    from django.forms.fields import email_re
-except ImportError:
-    from django.core.validators import email_re
+
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
 
 from pinry.core.models import Pin
 from pinry.users.models import User
 
 
+def validateEmail(email):
+    try:
+        validate_email(email)
+        return True
+    except ValidationError:
+        return False
+
+
 class CombinedAuthBackend(object):
     def authenticate(self, username=None, password=None):
-        is_email = email_re.match(username)
+        is_email = validateEmail(username)
         if is_email:
             qs = User.objects.filter(email=username)
         else:
