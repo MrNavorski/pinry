@@ -1,0 +1,8 @@
+<uwsgi>
+    <socket>127.0.0.1:19001</socket>
+    <chdir>/mnt/users/briapp/apps/nicedesign</chdir>
+    <pythonpath>..</pythonpath>
+    <processes>10</processes>
+    <daemonize>/mnt/data/logs/uwsgi/uwsgi_nicedesign.log</daemonize>
+    <module>uwsgi_wsgi_product</module>
+</uwsgi>
