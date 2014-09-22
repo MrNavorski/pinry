@@ -48,17 +48,17 @@ $(window).load(function() {
         freezeScroll();
         $('body').append(renderTemplate('#lightbox-template', context));
         var box = $('.lightbox-background');
-        box.css('height', 800);
-        $('.lightbox-image-wrapper').css('height', 600);
+        box.css('height', $(document).height());
+        $('.lightbox-image-wrapper').css('height', context.image.standard.height/6);
         box.fadeIn(200);
-        $('.lightbox-image').css('height', 600).load(function() {
+        $('.lightbox-image').css('height', context.image.standard.height/6).load(function() {
             $(this).fadeIn(200);
         });
         $('.lightbox-wrapper').css({
-            'width': 800,
+            'width': context.image.standard.width/6,
             'margin-top': 80,
             'margin-bottom': 80,
-            'margin-left': -400
+            'margin-left': -context.image.standard.width/12
         });
         if ($('.lightbox-wrapper').height()+140 > $(window).height())
             $('.lightbox-background').height($('.lightbox-wrapper').height()+140);
