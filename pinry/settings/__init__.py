@@ -25,7 +25,8 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(SITE_ROOT, 'media')
 STATIC_ROOT = os.path.join(SITE_ROOT, 'static')
 TEMPLATE_DIRS = [os.path.join(SITE_ROOT, 'pinry/templates')]
-STATICFILES_DIRS = [os.path.join(SITE_ROOT, 'pinry/static')]
+STATICFILES_DIRS = [os.path.join(SITE_ROOT, 'pinry/../../static')]
+# print '=========', MEDIA_ROOT, STATIC_ROOT, TEMPLATE_DIRS,STATICFILES_DIRS
 
 
 STATICFILES_FINDERS = (
@@ -79,7 +80,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'south',
+    'south',
     'taggit',
     'compressor',
     'django_images',
